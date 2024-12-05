@@ -29,10 +29,10 @@ public class Primes {
                 c++;
             }
         }
-        double precents = (double) c ;
-        precents = precents/(double) n;
-        precents = precents*100;
-        int precentsFinal = (int) precents;
+        double percents = (double) c ;
+        percents = percents/(double) n;
+        percents = percents*100;
+        int percentsFinal = (int) percents;
         String printstr = String.format("There are %d primes between 2 and %d (%d%% are primes)", c, n, percentsFinal);
         System.out.println(printstr);
         
