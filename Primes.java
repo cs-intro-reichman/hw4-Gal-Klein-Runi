@@ -35,7 +35,7 @@ public class Primes {
         int percentsFinal = (int) percents;
         String percentsStr = ""+percentsFinal+"%";
         String printstr = "There are "+c+" primes between 2 and "+n+" ("+percentsStr+" are primes)";
-        System.out.println(printstr);
+        System.out.printf(printstr);
         
 
     }
