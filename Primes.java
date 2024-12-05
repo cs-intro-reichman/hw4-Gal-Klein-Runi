@@ -30,10 +30,10 @@ public class Primes {
             }
         }
         double percents = (double) c ;
-        percents = percents/(double) n;
+        percents = percents/ n;
         percents = percents*100;
         int percentsFinal = (int) percents;
-        String percentsStr = ""+percentsFinal+'%';
+        String percentsStr = ""+percentsFinal+"%";
         String printstr = "There are "+c+" primes between 2 and "+n+" ("+percentsStr+" are primes)";
         System.out.println(printstr);
         
