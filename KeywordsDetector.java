@@ -22,5 +22,58 @@ public class KeywordsDetector {
     // If a sentence contains one or more of the kewords, prints it.
     public static void detectAndPrint(String[] sentences, String[] keywords) {
         // Replace this comment with your code
+        for (int i = 0; i < sentences.length; i++) {
+            String sentence = lowerCase(sentences[i]);
+            for (int j = 0; j < keywords.length; j++) {
+                String keyword = lowerCase(keywords[j]);
+                if (contains(sentence, keyword)) {
+                    System.out.println(sentences[i]);
+                    break;
+                }
+            }
+        }
+    }
+
+    public static String lowerCase(String str) {
+        // Replace the following statement with your code
+        String newStr = "";
+        for (int i = 0; i < str.length(); i++) {
+            char ch = str.charAt(i);
+            if (ch >= 65 && ch <= 90 && ch != 32) {
+                ch = (char) (ch + 32);
+            }
+
+            newStr += ch;
+        }
+        return newStr;
+    }
+
+    /** If str1 contains str2, returns true; otherwise returns false. */
+    public static boolean contains(String str1, String str2) {
+        // Replace the following statement with your code
+        if (str2.length() == 0) {
+            return true;
+        }
+
+        if (str1.length() < str2.length()) {
+            return false;
+        }
+
+        for (int i = 0; i <= str1.length() - str2.length(); i++) {
+            int j;
+            for (j = 0; j < str2.length(); j++) {
+                if (i + j>str1.length()) {
+                    break;
+                }
+                if (str1.charAt(i + j) != str2.charAt(j)) {
+                    break;
+                }
+            }
+            if (j == str2.length()) {
+                return true; 
+            }
+        }
+    
+        return false; 
     }
 }
