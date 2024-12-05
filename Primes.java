@@ -33,8 +33,9 @@ public class Primes {
         precents = precents/(double) n;
         precents = precents*100;
         int precentsFinal = (int) precents;
-        String printstr = "There are " + c +" primes between 2 and "+ n +" ("+ precentsFinal + "%% are primes)";
-        System.out.println(printstr); 
+        String printstr = "There are " + c + " primes between 2 and " + n + " (" + precentsFinal + "% are primes)";
+        System.out.println(printstr);
+        
 
     }
 }
