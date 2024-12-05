@@ -8,12 +8,9 @@ public class Primes {
             arr[i] = true;
         }
         int p = 2;
-        while (p*p <= n) {
-            for (int i = p; i < arr.length; i++) {
-                if (i % p == 0 && i!=p) {
-                    arr[i] = false;
-                }
-
+        while (p * p <= n) {
+            for (int i = p * p; i < arr.length; i += p) {
+                arr[i] = false;
             }
             for (int i = p + 1; i < arr.length; i++) {
                 if (arr[i]) {
@@ -24,19 +21,17 @@ public class Primes {
         }
         int c = 0;
         for (int i = 2; i < arr.length; i++) {
-            if (arr[i] == true) {
+            if (arr[i]) {
                 System.out.println(i);
                 c++;
             }
         }
-        double percents = (double) c ;
-        percents = percents/ n;
-        percents = percents*100;
+        double percents = (double) c;
+        percents = percents / n;
+        percents = percents * 100;
         int percentsFinal = (int) percents;
-        String percentsStr = ""+percentsFinal+"%";
-        String printstr = "There are "+c+" primes between 2 and "+n+" ("+percentsStr+" are primes)";
-        System.out.printf(printstr);
-        
-
+        String percentsStr = percentsFinal + "%";
+        String printstr = String.format("There are %d primes between 2 and %d (%s are primes)", c, n, percentsStr);
+        System.out.println(printstr);
     }
 }
