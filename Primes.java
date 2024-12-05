@@ -29,7 +29,7 @@ public class Primes {
                 c++;
             }
         }
-        String printstr = "There are " + c +"primes between 2 and "+ n +" ("+ c/n*100 + "% are primes)";
+        String printstr = "There are " + c +" primes between 2 and "+ n +" ("+ c/n*100 + "% are primes)";
         System.out.println(printstr); 
 
     }
