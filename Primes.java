@@ -22,11 +22,15 @@ public class Primes {
                 }
             }
         }
+        int c = 0;
         for (int i = 2; i < arr.length; i++) {
             if (arr[i] == true) {
                 System.out.println(i);
+                c++;
             }
-
         }
+        String printstr = "There are " + c +"primes between 2 and "+ n +" ("+ c/n*100 + "% are primes)";
+        System.out.println(printstr); 
+
     }
 }

@@ -27,7 +27,6 @@ public class KeywordsDetector {
             for (int j=0; i<keywords.length; i++) {
                 if (contains(sentence, keywords[i])){
                     System.out.println(sentence);
-                    break;
                 }
             }
         }
