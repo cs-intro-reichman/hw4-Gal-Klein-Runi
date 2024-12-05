@@ -26,12 +26,9 @@ public class Primes {
                 c++;
             }
         }
-        double percents = (double) c;
-        percents = percents / n;
-        percents = percents * 100;
+    
+        double percents = (double) c / n * 100;
         int percentsFinal = (int) percents;
-        String percentsStr = percentsFinal + "%";
-        String printstr = String.format("There are %d primes between 2 and %d (%s are primes)", c, n, percentsStr);
-        System.out.println(printstr);
+        System.out.printf("There are %d primes between 2 and %d (%d%% are primes)%n", c, n, percentsFinal);
     }
-}
+    }
