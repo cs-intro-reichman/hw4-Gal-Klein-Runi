@@ -29,6 +29,6 @@ public class Primes {
     
         double percents = (double) c / n * 100;
         int percentsFinal = (int) percents;
-        System.out.printf("There are %d primes between 2 and %d (%d%% are primes)%n", c, n, percentsFinal);
+        System.out.printf("There are "+c+" primes between 2 and "+n+" ("+percentsFinal+"% are primes)");
     }
     }
